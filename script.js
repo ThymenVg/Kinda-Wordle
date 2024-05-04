@@ -34,7 +34,7 @@ function guess(word){
 function checkEnd(){
     let won = true;
     for (var i = 0; i < wordLength; i++) {
-        if(divArray[counter-2][i].classList.contains("grey")) won = false;
+        if(divArray[counter-2][i].classList.contains("grey") || divArray[counter-2][i].classList.contains("yellow")) won = false;
     }
     if(won || counter == 7){
         document.querySelector("input").value = toGuess;
